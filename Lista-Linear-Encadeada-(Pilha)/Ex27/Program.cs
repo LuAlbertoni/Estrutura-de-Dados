@@ -85,7 +85,7 @@ do
 } while (opcao != 'e');
 
 
-static void Insere(ref tp_no r, int x)
+void Insere(ref tp_no r, int x)
 {
     if (r == null)
     {
@@ -98,7 +98,7 @@ static void Insere(ref tp_no r, int x)
         Insere(ref r.dir, x);
 }
 
-static tp_no Busca(tp_no r, int x)
+tp_no Busca(tp_no r, int x)
 {
     if (r == null)
         return null;
@@ -110,7 +110,7 @@ static tp_no Busca(tp_no r, int x)
         return Busca(r.dir, x);
 }
 
-static tp_no RetornaMaior(ref tp_no r)
+tp_no RetornaMaior(ref tp_no r)
 {
     if (r.dir == null)
     {
@@ -122,7 +122,7 @@ static tp_no RetornaMaior(ref tp_no r)
         return RetornaMaior(ref r.dir);
 }
 
-static tp_no Remove(ref tp_no r, int x)
+tp_no Remove(ref tp_no r, int x)
 {
     if (r == null)
         return null;
@@ -146,7 +146,7 @@ static tp_no Remove(ref tp_no r, int x)
         return Remove(ref r.dir, x);
 }
 
-static void EmOrdem(tp_no r)
+void EmOrdem(tp_no r)
 {
     if (r != null)
     {
@@ -156,7 +156,7 @@ static void EmOrdem(tp_no r)
     }
 }
 
-static void PreOrdem(tp_no r)
+void PreOrdem(tp_no r)
 {
     if (r != null)
     {
@@ -166,7 +166,7 @@ static void PreOrdem(tp_no r)
     }
 }
 
-static void PosOrdem(tp_no r)
+void PosOrdem(tp_no r)
 {
     if (r != null)
     {
